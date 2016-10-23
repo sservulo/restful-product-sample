@@ -1,0 +1,245 @@
+{
+	"variables": [],
+	"info": {
+		"name": "RESTful Product Webservice",
+		"_postman_id": "520faffd-7986-d6a1-e1c6-e068833434c0",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create product",
+			"request": {
+				"url": "localhost:8080/product",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Jose\", \"description\": \"uhul\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get all",
+			"request": {
+				"url": "localhost:8080/product/all",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get product",
+			"request": {
+				"url": "localhost:8080/product/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Jose\",\"description\":\"Uhul\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get product without children",
+			"request": {
+				"url": "localhost:8080/product/1?excludeChildren=true",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Jose\",\"description\":\"Uhul\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create product with parent",
+			"request": {
+				"url": "localhost:8080/product",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Jose\", \"description\": \"uhul\", \"parent\":{\"id\":1}}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete product",
+			"request": {
+				"url": "localhost:8080/product/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update product",
+			"request": {
+				"url": "localhost:8080/product/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Jose\", \"description\": \"hahaha\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create image",
+			"request": {
+				"url": "localhost:8080/product/image",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"PNG\", \"product\": {\"id\":1}}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get children",
+			"request": {
+				"url": "localhost:8080/product/1/image",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Jose\",\"description\":\"Uhul\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get images",
+			"request": {
+				"url": "localhost:8080/product/1/image",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Jose\",\"description\":\"Uhul\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete image",
+			"request": {
+				"url": "localhost:8080/product/image/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get product copy",
+			"request": {
+				"url": "localhost:8080/product/1",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Jose\",\"description\":\"Uhul\"}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
